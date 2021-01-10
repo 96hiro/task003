@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>eelテスト</title>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <h2>eelテスト</h2>
+        <script type="text/javascript" src="./eel.js"></script>
+        <div>
+            csvファイル名：
+            <input type="text" id="file_name">
+        </div>
+        <div>
+            キーワード：
+            <input type="text" name="" id="key_word">
+            <button id="search">検索</button>
+        </div>
+        <textarea name="" id="reslt_write" cols="30" rows="10"></textarea>
+        <script type="text/javascript" src="./eel.js"></script>
+        <script type="text/javascript">
+            // var btn = document.getElementById("btn");
+            // bb.onclick = function(){
+
+
+            search.addEventListener('click', () => {
+                eel.kimetsu_search(key_word.value,file_name.value,reslt_write)
+            })
+
+            // javascriptの関数をeelに登録
+            eel.expose(view_log_js)
+            function view_log_js(text){
+                reslt_write.value += text + "\n"
+            }
+        </script>
+    </body>
+</html>
