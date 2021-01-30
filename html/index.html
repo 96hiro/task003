@@ -21,15 +21,28 @@
             // var btn = document.getElementById("btn");
             // bb.onclick = function(){
 
-
-            search.addEventListener('click', () => {
+            document.getElementById("search").onclick = function() {
                 eel.kimetsu_search(key_word.value,file_name.value,reslt_write)
-            })
+                alert("検索ボタンがクリックされました")
+            }; 
 
+            // search.addEventListener('click', () => {
+            //     eel.kimetsu_search(key_word.value,file_name.value,reslt_write)
+            // })
+
+            // var arr = [] ;
             // javascriptの関数をeelに登録
             eel.expose(view_log_js)
             function view_log_js(text){
                 reslt_write.value += text + "\n"
+                // reslt_write.value.add(text + "\n")
+                // reslt_write.value = reslt_write.value + text + "\n"
+                // reslt_write.value = reslt_write.value + "\n"
+                alert("関数：view_log_jsが呼び出されました")
+                // arr.push(text);
+                // reslt_write.value = arr
+                // reslt.add(text+"\n")
+                // reslt_write.value = reslt
             }
         </script>
     </body>

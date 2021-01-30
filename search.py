@@ -1,6 +1,7 @@
 import pandas as pd
 import eel
 
+
 ### デスクトップアプリ作成課題
 def kimetsu_search(word,file_name,reslt_write):
     # 検索対象取得
@@ -9,9 +10,9 @@ def kimetsu_search(word,file_name,reslt_write):
 
     # 検索
     if word in source:
-        # print("『{}』はあります".format(word))
+        print("『{}』はあります".format(word))
+        # eel.view_log_js("{}はあります。".format(word))
         eel.view_log_js("{}はあります。".format(word))
-        # eel.view_log_js()
     else:
         # print("『{}』はありません".format(word))
         eel.view_log_js("{}はありません" .format(word))
